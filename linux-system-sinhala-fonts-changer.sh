@@ -4,7 +4,7 @@
  #මෙම system-sinhala-fonts-changer.sh script එක මගින් අවශ්‍ය sinhala fonts download කිරීම හා install කිරීම හා අනෙකුත් කාර්යයන් බොහෝමයක් සිදුකරයි
  #මෙම script එක install කරන ආකාරය:
   #(terminal එකෙහි පහත commands 2ක run කරන්න):
-   #wget https://github.com/hankyoTutorials/linux-system-sinhala-font-changer/blob/main/linux-system-sinhala-fonts-changer.sh
+   #wget https://raw.githubusercontent.com/hankyoTutorials/linux-system-sinhala-font-changer/main/linux-system-sinhala-fonts-changer.sh
    #bash linux-system-sinhala-fonts-changer.sh
  #ඉන්පසු fonts වෙනස් කිරීම සදහා:
    #terminal එකෙහි "sinhala" ලෙස type කලවිට ලැබෙන උපදෙස් පරිදි sinhala fonts වෙනස් කල හැක
@@ -49,9 +49,12 @@ unzip -jo abhaya-libre-font.zip '*abhaya-libre-font_v1.060_20170212/ttf/*' -d ~/
 #refresh fonts:
 fc-cache -fv &>/dev/null;
 
+echo "[පි ය ව ර 3] Sinhala Fonts වෙ න ස්  කි රී ම ට  සූ දා න ම්  වෙ මි න්  ප ව ති යි:"
+
+echo "Downloading sinhala fonts changing script from github.com:";
+wget -q --show-progress https://github.com/hankyoTutorials/linux-system-sinhala-font-changer/raw/main/sinhala.sh;
 #--------------------------------------------------------------------
 
-echo "[පි ය ව ර 3] Sinhala Fonts වෙ න ස්  කි රී ම ට  සූ දා න ම්  වෙ මි න්  ප ව ති යි:"
 
 #-----------Download Config Script from SLrootKit's Repository-------
 mkdir -p ~/.config/fontconfig/conf.d/;
@@ -62,8 +65,6 @@ cp 50-custom-si.conf ../;
 #--------------------------------------------------------------------
 
 #-----------add sinhala.sh font changing script to bashrc------------
-echo "Downloading sinhala fonts changing script from github.com:";
-wget -q --show-progress https://github.com/hankyoTutorials/linux-system-sinhala-font-changer/blob/main/sinhala.sh;
 
 #To backup other NotoSans fonts while Bold font is active:
 mkdir ~/.config/sinhala-fonts-changer/fonts-backup/;
