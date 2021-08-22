@@ -1,9 +1,13 @@
 #!/bin/bash
 
-#-----------version-0.1.0v-------------------------------------------
+#-----------version-1.0v---------------------------------------------
  #මෙම system-sinhala-fonts-changer.sh script එක මගින් අවශ්‍ය sinhala fonts download කිරීම හා install කිරීම හා අනෙකුත් කාර්යයන් බොහෝමයක් සිදුකරයි
  #මෙම script එක install කරන ආකාරය:
-  #
+  #(terminal එකෙහි පහත commands 2ක run කරන්න):
+   #wget https://github.com/hankyoTutorials/linux-system-sinhala-font-changer/blob/main/linux-system-sinhala-fonts-changer.sh
+   #bash linux-system-sinhala-fonts-changer.sh
+ #ඉන්පසු fonts වෙනස් කිරීම සදහා:
+   #terminal එකෙහි "sinhala" ලෙස type කලවිට ලැබෙන උපදෙස් පරිදි sinhala fonts වෙනස් කල හැක
 #--------------------------------------------------------------------
 
 #-----------Welcome log----------------------------------------------
@@ -23,41 +27,55 @@ rm -rf ~/.config/fontconfig/*;
 rm -f ~/.local/share/fonts/Noto*;
 #--------------------------------------------------------------------
 
-#-----------Download Fonts and Extract to .fonts Folder--------------
+#-----------Download and Extract Fonts Folder------------------------
 mkdir -p ~/.local/share/fonts/;
 mkdir ~/.config/sinhala-fonts-changer/;
 cd ~/.config/sinhala-fonts-changer/;
 
-echo "[පි ය ව ර 2] NotoSansSinhala හා NotoSerifSinhala ය න fonts දැන් download වෙ මි න්  ප ව ති යි...";
-wget https://noto-website-2.storage.googleapis.com/pkgs/NotoSansSinhala-hinted.zip;
+echo "[පි ය ව ර 2] sinhala fonts අ න් ත ර් ජා ල යෙ න් download වෙ මි න්  ප ව ති යි:";
+echo "Downloading and Installing Noto Sans Sinhala Font:";
+wget -q --show-progress https://noto-website-2.storage.googleapis.com/pkgs/NotoSansSinhala-hinted.zip;
 unzip -o NotoSansSinhala-hinted.zip -d ~/.local/share/fonts/;
-rm ~/.local/share/fonts/*UI*; #remove UI fonts
+rm ~/.local/share/fonts/*UI*; #remove NotoSansSinhala UI fonts
 
-wget https://noto-website-2.storage.googleapis.com/pkgs/NotoSerifSinhala-hinted.zip;
+echo "Downloading and Installing Noto Serif Sinhala Font:";
+wget -q --show-progress https://noto-website-2.storage.googleapis.com/pkgs/NotoSerifSinhala-hinted.zip;
 unzip -o NotoSerifSinhala-hinted.zip -d ~/.local/share/fonts/;
-fc-cache -fv;
 
-#download sinhala.sh - sinhala font changing script from github:
-cp ~/linuxDir/sinhala-fonts-changer/sinhala.sh ./;
+echo "Downloading and Installing Abhaya-Libre(FMabhaya) Sinhala Font:";
+wget -q --show-progress https://github.com/mooniak/abhaya-libre-font/releases/download/v1.060/abhaya-libre-font_v1.060_20170212.zip -O abhaya-libre-font.zip;
+unzip -jo abhaya-libre-font.zip '*abhaya-libre-font_v1.060_20170212/ttf/*' -d ~/.local/share/fonts/;
 
-echo "[පි ය ව ර 3] download ක ර න  ල ද NotoSansSinhala හා  NotoSerifSinhala fonts install ක ර න  ල දි.";
+#refresh fonts:
+fc-cache -fv &>/dev/null;
+
 #--------------------------------------------------------------------
+
+echo "[පි ය ව ර 3] Sinhala Fonts වෙ න ස්  කි රී ම ට  සූ දා න ම්  වෙ මි න්  ප ව ති යි:"
 
 #-----------Download Config Script from SLrootKit's Repository-------
 mkdir -p ~/.config/fontconfig/conf.d/;
 cd ~/.config/fontconfig/conf.d/;
-wget https://gist.githubusercontent.com/cipherdragon/c22b2f10b1d05f970b9049028136d0d2/raw/790674d84ac733ea95da181766fb09d6235c7d94/50-custom-si.conf;
+echo "Downloading 50-custom-si.conf File from Github.com:"; 
+wget -q --show-progress https://gist.githubusercontent.com/cipherdragon/c22b2f10b1d05f970b9049028136d0d2/raw/790674d84ac733ea95da181766fb09d6235c7d94/50-custom-si.conf;
 cp 50-custom-si.conf ../;
-echo -e "[පි ය ව ර 4] sinhala font එ ක  ලෙ ස  NotoSansSinhala font එක  යො දන  ල දි..\n\nfont එ ක  වෙ න ස්  වී  ඇ ත් දැ යි  ප රි ක් ෂා  ක ර  බැ ලී ම ට  මෙ ම  web පි ටු ව ට  පි වි සෙ න් න : https://si.wikipedia.org/wiki/sinhala";
 #--------------------------------------------------------------------
 
 #-----------add sinhala.sh font changing script to bashrc------------
+echo "Downloading sinhala fonts changing script from github.com:";
+wget -q --show-progress https://github.com/hankyoTutorials/linux-system-sinhala-font-changer/blob/main/sinhala.sh;
+
+#To backup other NotoSans fonts while Bold font is active:
 mkdir ~/.config/sinhala-fonts-changer/fonts-backup/;
 
+echo "Add sinhala.sh Fonts Changing Script to Bashrc:";
 if [[ ! "$(<~/.bashrc)" =~ "sinhala.sh" ]];then
  echo "alias sinhala=\"bash ~/.config/sinhala-fonts-changer/sinhala.sh\"" >> ~/.bashrc;
  source ~/.bashrc;
 fi
+#--------------------------------------------------------------------
 
-echo -e "\nඔ බ ට linux terminal එ කෙ හි  මෙ ම  ඉ ල ක් ක ම්  ධා ව න ය  ක ර fonts අ ත ර  හු ව මා රු  වි ය  හැ ක ,\n 1 = NotoSansSinhala\n 2 = NotoSerifSinhala\n 3 = default system font";
+#-----------display the help message---------------------------------
+echo -e "[පි ය ව ර 4] Done!.., ඔ බ ට  දැ න්  sinhala fonts වෙ න ස්  ක ල  හැ ක :\n";
+source ~/.config/sinhala-fonts-changer/sinhala.sh;
 #--------------------------------------------------------------------

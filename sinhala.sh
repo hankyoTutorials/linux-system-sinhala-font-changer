@@ -51,8 +51,8 @@ if [[ $1 == 4 ]];then
 fi
 #--------------------------------------------------------------------
 
-#-----------display help message when userInputs are incorrect-------
+#-----------display help and usage message---------------------------
 if [[ (! "1 2 3 4" =~ "$1" && "$isUserInputIsValid" == "false") || "$1" == "" ]];then
-echo -e "sinhala fonts වෙ න ස්  කි රී ම ට  ප හ ත commands භා වි ත  ක ර න් න:\n sinhala 1-4    (1 සි ට 4 දක් වා  ති බෙ න් නේ  ප් ර ධා න fonts 4 වේ )\n sinhala 10-$installedSinhalaFontsCount  (10 සි ට $installedSinhalaFontsCount දක් වා  ත ව ත් fonts රැස ක්  ති බේ )\n උ දාහ ර ණ :\n   sinhala 1\n   sinhala 3\n   sinhala 13\n   sinhala 24\nNOTE: fonts වෙ න ස්  වී ම ට  ත ත් ප ර 5ක් -10ක්  වැ නි  සු ලු  වේ ලා ව ක්  ග ත වේ.";
+echo -e "linux වල sinhala fonts වෙ න ස්  කි රී ම ට  ප හ ත linux commands භා වි ත  ක ර න් න :\n sinhala 1-4   (1 සි ට 4 දක් වා  ති බෙ න් නේ  ප් ර ධා න fonts 4 වේ )\n sinhala 10-$installedSinhalaFontsCount (10 සි ට $installedSinhalaFontsCount දක් වා  ත ව ත් fonts රැස ක්  ති බේ )\n උ දාහ ර ණ :\n   sinhala 1\n   sinhala 3\n   sinhala 13\n   sinhala 24\nNOTE: fonts වෙ න ස්  වී ම ට  ත ත් ප ර 5ක් -10ක්  වැ නි  සු ලු  වේ ලා ව ක්  ග ත වේ.\nමෙ ම web පි ටු ව  වෙ ත  පි වි ස  font එ ක  වෙ න ස් වී  ඇ ත් දැයි  ප රි ක් ෂා  ක ල  හැ ක : https://si.wikipedia.org/wiki/sinhala";
 fi
 #--------------------------------------------------------------------
