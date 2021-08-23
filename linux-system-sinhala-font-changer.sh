@@ -4,20 +4,27 @@
  #මෙම system-sinhala-font-changer.sh script එක මගින් අවශ්‍ය sinhala fonts download කිරීම හා install කිරීම හා අනෙකුත් කාර්යයන් බොහෝමයක් සිදුකරයි
  #මෙම script එක install කරන ආකාරය:
   #(terminal එකෙහි පහත commands 2ක run කරන්න):
-   #wget https://raw.githubusercontent.com/hankyoTutorials/linux-system-sinhala-font-changer/main/linux-system-sinhala-font-changer.sh
+   #wget https://raw.githubusercontent.com/hankyoTutorials/linux-system-sinhala-font-changer/main/linux-system-sinhala-font-changer.sh -O linux-system-sinhala-font-changer.sh
    #bash linux-system-sinhala-font-changer.sh
  #ඉන්පසු fonts වෙනස් කිරීම සදහා:
    #terminal එකෙහි "sinhala" ලෙස type කලවිට ලැබෙන උපදෙස් පරිදි sinhala fonts වෙනස් කල හැක
 #--------------------------------------------------------------------
 
-#-----------Welcome log----------------------------------------------
-echo "ආ යු බෝ  ව න් !!";
+#-----------colored tput outputs-------------------------------------
+red=$(tput setaf 9);
+yellow=$(tput setaf 11);
+lightBlue=$(tput setaf 14);
+end=$(tput sgr0);
+#--------------------------------------------------------------------
+
+#-----------welcome log----------------------------------------------
+echo "$yellowආ යු බෝ  ව න් $red!!$end";
 #--------------------------------------------------------------------
 
 #-----------Check Internet Connected Or Not--------------------------
 testInternet=$(ping -c 5 google.com);
-[[ ! $testInternet =~ "bytes" ]] && echo "ඔ බ ගේ  ප රි ග ණ ක ය  අ න් ත ර් ජා ල ය  හා  ස ම් බ න් ද  වී  නැ ත :-(" && exit;
-echo "[පි ය ව ර 1] ඔ බ ගේ  ප රි ග ණ ක ය  අ න් ත ර් ජා ල ය  හා  ස ම් බ න් ද  වී  ඇ ත :-)";
+[[ ! $testInternet =~ "bytes" ]] && echo "$yellowඔ බ ගේ  ප රි ග ණ ක ය  අ න් ත ර් ජා ල ය  හා  ස ම් බ න් ද  වී  නැ ත $red:-($end" && exit;
+echo "$red[පි ය ව ර 1] $yellowඔ බ ගේ  ප රි ග ණ ක ය  අ න් ත ර් ජා ල ය  හා  ස ම් බ න් ද  වී  ඇ ත $lightBlue:-)$end";
 #--------------------------------------------------------------------
 
 
@@ -32,26 +39,27 @@ mkdir -p ~/.local/share/fonts/;
 mkdir ~/.config/system-sinhala-font-changer/;
 cd ~/.config/system-sinhala-font-changer/;
 
-echo "[පි ය ව ර 2] sinhala fonts අ න් ත ර් ජා ල යෙ න් download වෙ මි න්  ප ව ති යි:";
-echo "Downloading and Installing Noto Sans Sinhala Font:";
+echo "$red[පි ය ව ර 2]$yellow sinhala fonts අ න් ත ර් ජා ල යෙ න් download වෙ මි න්  ප ව ති යි$lightBlue:$end";
+
+echo "${lightBlue}Downloading and Installing Noto Sans Sinhala Font$red:$end";
 wget -q --show-progress https://noto-website-2.storage.googleapis.com/pkgs/NotoSansSinhala-hinted.zip;
 unzip -qo NotoSansSinhala-hinted.zip -d ~/.local/share/fonts/;
 rm ~/.local/share/fonts/*UI*; #remove NotoSansSinhala UI fonts
 
-echo "Downloading and Installing Noto Serif Sinhala Font:";
+echo "${lightBlue}Downloading and Installing Noto Serif Sinhala Font$red:$end";
 wget -q --show-progress https://noto-website-2.storage.googleapis.com/pkgs/NotoSerifSinhala-hinted.zip;
 unzip -qo NotoSerifSinhala-hinted.zip -d ~/.local/share/fonts/;
 
-echo "Downloading and Installing Abhaya-Libre(FMabhaya) Sinhala Font:";
+echo "${lightBlue}Downloading and Installing Abhaya-Libre(FMabhaya) Sinhala Font$red:$end";
 wget -q --show-progress https://github.com/mooniak/abhaya-libre-font/releases/download/v1.060/abhaya-libre-font_v1.060_20170212.zip -O abhaya-libre-font.zip;
 unzip -qjo abhaya-libre-font.zip '*abhaya-libre-font_v1.060_20170212/ttf/*' -d ~/.local/share/fonts/;
 
 #refresh fonts without verbose messages:
 fc-cache -f;
 
-echo "[පි ය ව ර 3] Sinhala Fonts වෙ න ස්  කි රී ම ට  සූ දා න ම්  වෙ මි න්  ප ව ති යි:"
+echo "$red[පි ය ව ර 3]$yellow Sinhala Fonts වෙ න ස්  කි රී ම ට  සූ දා න ම්  වෙ මි න්  ප ව ති යි$lightBlue:$end";
 
-echo "Downloading sinhala fonts changing script from github.com:";
+echo "${lightBlue}Downloading sinhala fonts changing script from github.com$red:$end";
 wget -q --show-progress https://github.com/hankyoTutorials/linux-system-sinhala-font-changer/raw/main/sinhala.sh;
 #--------------------------------------------------------------------
 
@@ -69,7 +77,7 @@ cp 50-custom-si.conf ../;
 #To backup other NotoSans fonts while Bold font is active:
 mkdir ~/.config/system-sinhala-font-changer/fonts-backup/;
 
-echo "Add sinhala.sh Fonts Changing Script to Bashrc:";
+echo "${lightBlue}Adding sinhala.sh Fonts Changing Script to bashrc$red.$end";
 if [[ ! "$(<~/.bashrc)" =~ "sinhala.sh" ]];then
  echo "alias sinhala=\"bash ~/.config/system-sinhala-font-changer/sinhala.sh\"" >> ~/.bashrc;
  source ~/.bashrc;
@@ -77,6 +85,9 @@ fi
 #--------------------------------------------------------------------
 
 #-----------display the help message---------------------------------
-echo -e "[පි ය ව ර 4] Done!.., ඔ බ ට  දැ න්  sinhala fonts වෙ න ස්  ක ල  හැ ක :\n";
+echo -e "$red[පි ය ව ර 4]$yellow Done!.., ඔ බ ට  දැ න්  sinhala fonts වෙ න ස්  ක ල  හැ ක $lightBlue:$end\n";
+#change current font to "noto sans sinhala bold":
+bash ~/.config/system-sinhala-font-changer/sinhala.sh 4 &>/dev/null;
+#display help message:
 source ~/.config/system-sinhala-font-changer/sinhala.sh;
 #--------------------------------------------------------------------
