@@ -35,19 +35,19 @@ cd ~/.config/system-sinhala-font-changer/;
 echo "[පි ය ව ර 2] sinhala fonts අ න් ත ර් ජා ල යෙ න් download වෙ මි න්  ප ව ති යි:";
 echo "Downloading and Installing Noto Sans Sinhala Font:";
 wget -q --show-progress https://noto-website-2.storage.googleapis.com/pkgs/NotoSansSinhala-hinted.zip;
-unzip -o NotoSansSinhala-hinted.zip -d ~/.local/share/fonts/;
+unzip -qo NotoSansSinhala-hinted.zip -d ~/.local/share/fonts/;
 rm ~/.local/share/fonts/*UI*; #remove NotoSansSinhala UI fonts
 
 echo "Downloading and Installing Noto Serif Sinhala Font:";
 wget -q --show-progress https://noto-website-2.storage.googleapis.com/pkgs/NotoSerifSinhala-hinted.zip;
-unzip -o NotoSerifSinhala-hinted.zip -d ~/.local/share/fonts/;
+unzip -qo NotoSerifSinhala-hinted.zip -d ~/.local/share/fonts/;
 
 echo "Downloading and Installing Abhaya-Libre(FMabhaya) Sinhala Font:";
 wget -q --show-progress https://github.com/mooniak/abhaya-libre-font/releases/download/v1.060/abhaya-libre-font_v1.060_20170212.zip -O abhaya-libre-font.zip;
-unzip -jo abhaya-libre-font.zip '*abhaya-libre-font_v1.060_20170212/ttf/*' -d ~/.local/share/fonts/;
+unzip -qjo abhaya-libre-font.zip '*abhaya-libre-font_v1.060_20170212/ttf/*' -d ~/.local/share/fonts/;
 
-#refresh fonts:
-fc-cache -fv &>/dev/null;
+#refresh fonts without verbose messages:
+fc-cache -f;
 
 echo "[පි ය ව ර 3] Sinhala Fonts වෙ න ස්  කි රී ම ට  සූ දා න ම්  වෙ මි න්  ප ව ති යි:"
 
