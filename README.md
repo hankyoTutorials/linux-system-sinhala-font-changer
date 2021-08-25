@@ -24,7 +24,7 @@ Terminal එකෙහි පහත command එක run කිරීමෙන් s
 ස්වයංක්‍රීයව ක්‍රියාත්මක වේ.  
   
 ```
-  wget https://raw.githubusercontent.com/hankyoTutorials/linux-system-sinhala-font-changer/main/linux-system-sinhala-font-changer.sh -O linux-system-sinhala-font-changer.sh && bash linux-system-sinhala-font-changer.sh
+  wget https://raw.githubusercontent.com/hankyoTutorials/linux-system-sinhala-font-changer/main/downloader.sh -O installer.sh && bash installer.sh
 ```
   
 ඉන්පසු fonts වෙනස් කිරීම සදහා:
