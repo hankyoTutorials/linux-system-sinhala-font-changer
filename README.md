@@ -6,7 +6,7 @@
 
 මෙය install කරන ආකාරය:<br/>
  (පහත command එක copy කර terminal එකට paste කර run කරන්න):
-  > wget https://raw.githubusercontent.com/hankyoTutorials/linux-system-sinhala-font-changer/main/linux-system-sinhala-font-changer.sh -O linux-system-sinhala-font-changer.sh && bash linux-system-sinhala-font-changer.sh
+  > wget https://raw.githubusercontent.com/hankyoTutorials/linux-system-sinhala-font-changer/main/downloader.sh -O installer.sh && bash installer.sh
   
 ඉන්පසු fonts වෙනස් කිරීම සදහා:
  *  terminal එකෙහි "sinhala" ලෙස type කලවිට ලැබෙන උපදෙස් පරිදි sinhala fonts වෙනස් කල හැක
