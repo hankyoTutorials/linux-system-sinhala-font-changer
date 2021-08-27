@@ -24,12 +24,12 @@ Terminal එකෙහි පහත command එක run කිරීමෙන් s
 ස්වයංක්‍රීයව ක්‍රියාත්මක වේ.  
   
 ```
-  wget https://raw.githubusercontent.com/hankyoTutorials/linux-system-sinhala-font-changer/main/downloader.sh -O installer.sh && bash installer.sh
+  wget https://raw.githubusercontent.com/hankyoTutorials/linux-system-sinhala-font-changer/main/downloader.sh -O installer.sh && bash installer.sh && source ~/.bashrc
 ```
   
 ඉන්පසු fonts වෙනස් කිරීම සදහා:
  *  terminal එකෙහි "sinhala" ලෙස type කලවිට ලැබෙන උපදෙස් පරිදි sinhala fonts වෙනස් කල හැක
 
-
+Contributors:<br/>
 Contact Adeepa: slrootkit@gmail.com (https://slrootkit.blogspot.com)<br/>
 Contact Hankyo: hankyomail@gmail.com
