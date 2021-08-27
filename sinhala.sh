@@ -53,14 +53,14 @@ if [[ "1 2 3" =~ "$1" || $isUserInputIsValid == "true" ]];then
   rm -f ~/.config/fontconfig/conf.d/50-custom-si.conf;
   echo "${red}(1/$installedSinhalaFontsCount)${yellow}Removed the fontconfig configuration file.${end}";
  elif [[ $1 == 2 ]];then
-  cp ~/.config/fontconfig/50-custom-si.conf ~/.config/fontconfig/conf.d/50-custom-si.conf;
+  cp ~/.config/system-sinhala-font-changer/50-custom-si.conf ~/.config/fontconfig/conf.d/50-custom-si.conf
   echo "${red}(2/$installedSinhalaFontsCount)${yellow}Created font aliase for sinhala to Noto Sans Sinhala Font.${end}";
  elif [[ $1 == 3 ]];then
-  awk '{sub("Noto Sans Sinhala","Noto Serif Sinhala",$0)}1' ~/.config/fontconfig/50-custom-si.conf > ~/.config/fontconfig/conf.d/50-custom-si.conf;
+  awk '{sub("Noto Sans Sinhala","Noto Serif Sinhala",$0)}1' ~/.config/system-sinhala-font-changer/50-custom-si.conf > ~/.config/fontconfig/conf.d/50-custom-si.conf;
   echo "${red}(3/$installedSinhalaFontsCount)${yellow}Created font aliase for sinhala to Noto Serif Sinhala Font.${end}";
  else
   if $isUserInputIsValid;then
-   awk '{sub("Noto Sans Sinhala","'"$userRequestedFont"'")}1' ~/.config/fontconfig/50-custom-si.conf > ~/.config/fontconfig/conf.d/50-custom-si.conf;
+   awk '{sub("Noto Sans Sinhala","'"$userRequestedFont"'")}1' ~/.config/system-sinhala-font-changer/50-custom-si.conf > ~/.config/fontconfig/conf.d/50-custom-si.conf;
    userRequestedFontFullName=$(awk 'NR=='$1'-9{sub(/.ttf.*/,"");sub("-"," ");print}' <<< $installedSinhalaFontsList);
    echo -e "${red}($1/$installedSinhalaFontsCount)${yellow}Created font aliase for sinhala to ${userRequestedFontFullName}${end}";
   fi
@@ -72,13 +72,13 @@ fi
 if [[ $1 == 4 ]];then
  mv ~/.local/share/fonts/NotoSansSinhala* ~/.config/system-sinhala-font-changer/fonts-backup/;
  mv ~/.config/system-sinhala-font-changer/fonts-backup/NotoSansSinhala-Bold.ttf ~/.local/share/fonts/;
- cp ~/.config/fontconfig/50-custom-si.conf ~/.config/fontconfig/conf.d/50-custom-si.conf;
+ cp ~/.config/system-sinhala-font-changer/50-custom-si.conf ~/.config/fontconfig/conf.d/50-custom-si.conf;
  echo "${red}(4/$installedSinhalaFontsCount)${yellow}Created font aliase for sinhala to Noto Sans Sinhala font by removing non-bold fonts.${end}";
 fi
 #--------------------------------------------------------------------
 
 #-----------display help and usage message---------------------------
 if [[ (! "1 2 3 4" =~ "$1" && "$isUserInputIsValid" == "false") || "$1" == "" ]];then
-printf "${help_message}"
+ printf "${help_message}"
 fi
 #--------------------------------------------------------------------
