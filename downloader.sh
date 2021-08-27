@@ -25,7 +25,6 @@ echo "${red}[step 1] ${yellow}Internet connection detected. Moving to next step.
 #-----------Remove system-sinhala-font-changer files if exists-------
 rm -rf ~/.config/system-sinhala-font-changer/;
 rm -rf ~/.config/fontconfig/conf.d/50-custom-si.conf;
-rm -f ~/.local/share/fonts/Noto*;
 #--------------------------------------------------------------------
 
 #-----------Download and Extract Fonts-------------------------------
@@ -35,12 +34,12 @@ cd ~/.config/system-sinhala-font-changer/;
 mkdir fonts-backup/; #backup other NotoSansSinhala fonts when Bold font activated
 
 echo -e "\n${red}[step 2] ${yellow}Downloading sinhala fonts and configuration scripts...${end}";
-echo "${red}-------------------------------------------------"
+echo "${red}-------------------------------------------------";
 echo "${lightBlue}Downloading and Installing Noto Sans Sinhala Font${red}:${end}";
-wget -q --show-progress https://noto-website-2.storage.googleapis.com/pkgs/NotoSansSinhala-hinted.zip;
-unzip -qo NotoSansSinhala-hinted.zip -d ~/.local/share/fonts/;
+#wget -q --show-progress https://noto-website-2.storage.googleapis.com/pkgs/NotoSansSinhala-hinted.zip;
+#unzip -qo NotoSansSinhala-hinted.zip -d ~/.local/share/fonts/;
 #for testing:
-# unzip -qo ~/Downloads/NotoSansSinhala-hinted.zip -d ~/.local/share/fonts/;
+ unzip -qo ~/Downloads/NotoSansSinhala-hinted.zip -d ~/.local/share/fonts/;
 rm ~/.local/share/fonts/NotoSansSinhalaUI*; #remove NotoSansSinhala UI fonts
 
 echo "${lightBlue}Downloading and Installing Noto Serif Sinhala Font${red}:${end}";
@@ -52,9 +51,9 @@ wget -q --show-progress https://github.com/mooniak/abhaya-libre-font/releases/do
 unzip -qjo abhaya-libre-font.zip '*abhaya-libre-font_v1.060_20170212/ttf/*' -d ~/.local/share/fonts/;
 
 echo "${lightBlue}Downloading installer script${red}:${end}";
-wget -q --show-progress https://github.com/hankyoTutorials/linux-system-sinhala-font-changer/raw/main/sinhala.sh;
+#wget -q --show-progress https://github.com/hankyoTutorials/linux-system-sinhala-font-changer/raw/main/sinhala.sh;
 #for testing:
- #cp ~/linuxDir/system-sinhala-font-changer/sinhala.sh .;
+ cp ~/linuxDir/system-sinhala-font-changer/sinhala.sh .;
 
 echo "${lightBlue}Downloading fontconfig configuration File from Github.com${red}:${end}"; 
 wget -q --show-progress https://gist.githubusercontent.com/cipherdragon/c22b2f10b1d05f970b9049028136d0d2/raw/790674d84ac733ea95da181766fb09d6235c7d94/50-custom-si.conf;
@@ -66,19 +65,32 @@ echo -e "\n${red}[step 3] ${yellow}Setting up installlation scripts...${lightBlu
 
 mkdir -p ~/.config/fontconfig/conf.d/;
 cp 50-custom-si.conf ~/.config/fontconfig/conf.d/;
+#--------------------------------------------------------------------
 
 #-----------add sinhala.sh font changing script to bashrc------------
-echo "${lightBlue}Adding sinhala.sh Fonts Changing Script to bashrc${red}.${end}";
 if [[ ! "$(<~/.bashrc)" =~ "sinhala.sh" ]];then
- echo "alias sinhala=\"bash ~/.config/system-sinhala-font-changer/sinhala.sh\"" >> ~/.bashrc;
+ echo "[ alias sinhala=\"bash ~/.config/system-sinhala-font-changer/sinhala.sh\" ]";
+ echo "Can you allow us to add above line to your .bashrc file to continue installation?:";
+ read -p 'Type "no" to exit, type "yes" to continue installation: [yes/no]? ' userPermission
+ if [[ "${userPermission,,}" == "yes" ]];then
+  echo "alias sinhala=\"bash ~/.config/system-sinhala-font-changer/sinhala.sh\"" >> ~/.bashrc;
+  echo "${lightBlue}Added sinhala.sh fonts changing script to .bashrc${red}.${end}";
+ else
+  echo "Stopped the installation.. Exiting!..";
+  rm -rf ~/.config/system-sinhala-font-changer/;
+  rm -rf ~/.config/fontconfig/conf.d/50-custom-si.conf;
+  exit;
+ fi
 fi
-source ~/.bashrc;
 #--------------------------------------------------------------------
 
 #-----------display the help message---------------------------------
-echo -e "\n${yellow} Setup completed! Now you can run sinhala.sh ${lightBlue}:${end}\n";
-#change current font to "noto sans sinhala bold":
-bash ~/.config/system-sinhala-font-changer/sinhala.sh 4 &>/dev/null;
+sleep 3; #show help message after 3 second
+echo -e "\n${red}[step 4] ${yellow}Setup completed! Now you can change system-wide sinhala font ${lightBlue}:${end}\n";
+
 #display help message:
 source ~/.config/system-sinhala-font-changer/sinhala.sh;
+
+#change current font to "noto sans sinhala bold":
+bash ~/.config/system-sinhala-font-changer/sinhala.sh 4 &>/dev/null;
 #--------------------------------------------------------------------
