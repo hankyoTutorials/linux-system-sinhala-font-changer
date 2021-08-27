@@ -36,10 +36,10 @@ mkdir fonts-backup/; #backup other NotoSansSinhala fonts when Bold font activate
 echo -e "\n${red}[step 2] ${yellow}Downloading sinhala fonts and configuration scripts...${end}";
 echo "${red}-------------------------------------------------";
 echo "${lightBlue}Downloading and Installing Noto Sans Sinhala Font${red}:${end}";
-#wget -q --show-progress https://noto-website-2.storage.googleapis.com/pkgs/NotoSansSinhala-hinted.zip;
-#unzip -qo NotoSansSinhala-hinted.zip -d ~/.local/share/fonts/;
+wget -q --show-progress https://noto-website-2.storage.googleapis.com/pkgs/NotoSansSinhala-hinted.zip;
+unzip -qo NotoSansSinhala-hinted.zip -d ~/.local/share/fonts/;
 #for testing:
- unzip -qo ~/Downloads/NotoSansSinhala-hinted.zip -d ~/.local/share/fonts/;
+# unzip -qo ~/Downloads/NotoSansSinhala-hinted.zip -d ~/.local/share/fonts/;
 rm ~/.local/share/fonts/NotoSansSinhalaUI*; #remove NotoSansSinhala UI fonts
 
 echo "${lightBlue}Downloading and Installing Noto Serif Sinhala Font${red}:${end}";
@@ -51,9 +51,9 @@ wget -q --show-progress https://github.com/mooniak/abhaya-libre-font/releases/do
 unzip -qjo abhaya-libre-font.zip '*abhaya-libre-font_v1.060_20170212/ttf/*' -d ~/.local/share/fonts/;
 
 echo "${lightBlue}Downloading installer script${red}:${end}";
-#wget -q --show-progress https://github.com/hankyoTutorials/linux-system-sinhala-font-changer/raw/main/sinhala.sh;
+wget -q --show-progress https://github.com/hankyoTutorials/linux-system-sinhala-font-changer/raw/main/sinhala.sh;
 #for testing:
- cp ~/linuxDir/system-sinhala-font-changer/sinhala.sh .;
+# cp ~/linuxDir/system-sinhala-font-changer/sinhala.sh .;
 
 echo "${lightBlue}Downloading fontconfig configuration File from Github.com${red}:${end}"; 
 wget -q --show-progress https://gist.githubusercontent.com/cipherdragon/c22b2f10b1d05f970b9049028136d0d2/raw/790674d84ac733ea95da181766fb09d6235c7d94/50-custom-si.conf;
