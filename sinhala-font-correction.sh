@@ -8,7 +8,8 @@
 # -------------------------- colored tput outputs ------------------------- 
 red=$(tput setaf 9);
 yellow=$(tput setaf 11);
-lightBlue=$(tput setaf 14);
+green=$(tput setaf 10);
+cyan=$(tput setaf 14);
 end=$(tput sgr0);
 
 # ------------------------------ welcome log ------------------------------ 
@@ -28,7 +29,7 @@ or run the script for each user.
 \n"
 #--------------------------------------------------------------------
 
-read -p "Press enter to continue> "
+read -p "${green}Press enter to continue> ${end}"
 
 #-----------Download and Extract Fonts-------------------------------
 
@@ -39,47 +40,50 @@ number of the font you like. Visit the link in the bracket to preview how
 each font will look like. 
 
 Here are your options, 
-
+${cyan}
 1 - Noto Sans Sinhala (https://www.google.com/get/noto/#sans-sinh)
 2 - Noto Serif Sinhala (https://www.google.com/get/noto/#serif-sinh)
-
 n - exit
+${end}
 "
 
 while true
 do
-	read -p "select the font (type the number)> " selected_font_code
+	read -p "${green}select the font (type the number)> ${end}" selected_font_code
 	[[ $selected_font_code =~ ^n$ ]] && exit
     [[ $selected_font_code =~ ^[12]$ ]] && break
-	printf "Only 1 or 2 or n is accepted. n to exit the script.\n\n"
+	printf "${red}Only 1 or 2 or n is accepted. n to exit the script.${end}\n\n"
 done
 
 selected_font=$(([[ $selected_font_code == 1 ]] && echo "Noto Sans Sinhala") || (echo "Noto Serif Sinhala"))
 
-printf "\nChecking if the selected font is installed...\n\n"
+printf "\n${red}Checking if the selected font is installed...${end}\n"
 
 if ! fc-list | grep -i "$selected_font" > /dev/null; then
 	printf "%s\n" \
+		"" \
         "Script detected that the selected font is not installed." \
         "Font will be installed now. Select an option for installation." \
-        "" \
+        "${cyan}" \
         "1 - Install the full font package (highly recommended)" \
         "2 - Only install the bold font" \
         "n - Exit" \
-        "" \
+        "${end}" \
         "Note:" \
         "Some users prefer to render sinhala text in bold. In that case," \
         "you can choose to install only the bold font (2 option), but it" \
         "is highly recommended to install full font pack as it allows the" \
-        "application to decide what font weight to use."
+        "application to decide what font weight to use." \
+		""
 
 	while true
 	do
-		read -p "(type the number)> " selected_font_install_option
+		read -p "${green}(type the number)> ${end}" selected_font_install_option
 		[[ $selected_font_install_option =~ ^n$ ]] && exit
     	[[ $selected_font_install_option =~ ^[12]$ ]] && break
-		printf "Only 1,2,n or 0 is accepted. n to exit the script.\n\n"
+		printf "${red}Only 1,2,n or 0 is accepted. n to exit the script.\n\n${end}"
 	done
+	printf "\n${red}Please wait...${end}\n"
 
 	copy_dest=~/".local/share/fonts/ttf/${selected_font}"
 	
@@ -93,9 +97,9 @@ if ! fc-list | grep -i "$selected_font" > /dev/null; then
 	fc-cache -f
 fi
 
-printf '%s\n' "Setting up the configuration file..."
+printf '%s\n' "${red}Setting up the configuration file...${end}"
 
 mkdir -p ~/.config/fontconfig/conf.d
 sed "s/FONT_PLACE_HOLDER/${selected_font}/" 50-si-custom.conf > ~/.config/fontconfig/conf.d/50-si-custom.conf
 
-printf '%s\n' "Configuration is now completed! Exiting."
+printf '%s\n' "${red}Configuration is now completed! Exiting.${end}"
