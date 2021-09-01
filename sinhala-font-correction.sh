@@ -1,18 +1,13 @@
 #!/bin/bash
 
-#-----------version-1.0v---------------------------------------------
-# මෙම system-sinhala-font-changer.sh script එක මගින් අවශ්‍ය sinhala fonts 
-# download කිරීම හා install කිරීම හා අනෙකුත් කාර්යයන් බොහෝමයක් සිදුකරයි
-#--------------------------------------------------------------------
-
-# -------------------------- colored tput outputs ------------------------- 
+# -------------------------- colored tput outputs ------------------------
 red=$(tput setaf 9);
 yellow=$(tput setaf 11);
 green=$(tput setaf 10);
 cyan=$(tput setaf 14);
 end=$(tput sgr0);
 
-# ------------------------------ welcome log ------------------------------ 
+# ------------------------------ welcome log -----------------------------
 printf \
 "
 ${yellow}Welcome to Font Changer Script!!!${end}
@@ -27,11 +22,11 @@ Since all actions are done in user level, no settings will apply system
 wide. If you need settings to apply system wide, either do it manually
 or run the script for each user.
 \n"
-#--------------------------------------------------------------------
+# -------------------------------------------------------------------------
 
 read -p "${green}Press enter to continue> ${end}"
 
-#-----------Download and Extract Fonts-------------------------------
+# --------------- Change system sinhala font -----------------------------
 
 printf \
 "
@@ -103,3 +98,5 @@ mkdir -p ~/.config/fontconfig/conf.d
 sed "s/FONT_PLACE_HOLDER/${selected_font}/" 50-si-custom.conf > ~/.config/fontconfig/conf.d/50-si-custom.conf
 
 printf '%s\n' "${red}Configuration is now completed! Exiting.${end}"
+
+# ------------------------------------------------------------------------
