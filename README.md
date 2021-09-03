@@ -20,7 +20,7 @@ configuration file එකක් සහ අවශ්‍ය font ස්වයං�
 පහත command ටික copy කර terminal එකට paste කිරීමෙන් මෙය download කර install කරගතහැකියි:<br/>
 
 ```
-cd ~
+cd $HOME
 wget https://github.com/hankyoTutorials/linux-system-sinhala-font-changer/archive/refs/heads/main.zip
 unzip -qo main.zip
 mv linux-system-sinhala-font-changer-main system-sinhala-font-changer
