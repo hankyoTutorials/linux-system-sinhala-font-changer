@@ -15,21 +15,19 @@ configuration file එකක් සහ අවශ්‍ය font ස්වයං�
 
 ## භාවිතය
 
-ඔබ git cli භාව්ත කරනවා නම් පහත command එකෙන් මෙය download කරගන්න. 
+### linux terminal එක භාවිතයෙන් sinhala font වෙනස් කරමු:
+
+පහත command ටික copy කර terminal එකට paste කිරීමෙන් මෙය download කර install කරගතහැකියි:<br/>
 
 ```
-git clone https://github.com/hankyoTutorials/linux-system-sinhala-font-changer.git
+cd ~
+wget https://github.com/hankyoTutorials/linux-system-sinhala-font-changer/archive/refs/heads/main.zip
+unzip -qo main.zip
+mv linux-system-sinhala-font-changer-main system-sinhala-font-changer
+cd system-sinhala-font-changer/
+bash sinhala-font-changer.sh
 ```
-
-නැතිනම් [Release page එකෙන් download කරගන්න.](https://github.com/hankyoTutorials/linux-system-sinhala-font-changer/releases/tag/v1.0)
-Release page එකෙන් download කරගත් පසු එය unzip කළයුතු වේ. 
-
-Download කිරීමෙන් [හා unzip කිරීමෙන්] පසු terminal එකෙන් `sinhala-font-correction` ෆෝල්ඩරය 
-තුලට ගොස් `./sinhala-font-correction.sh` යන විධානයෙන් script එක ක්‍රියාත්මක කළ හැකිය. ඒ 
-සඳහා මෙහෙයුම් පද්ධතියෙන් අවසර නොලැබෙන්නේ නම් `sinhala-font-correction.sh` file එකට 
-ක්‍රියාත්මක වීමේ අවසරය දිය යුතුය (`chmod +x ./sinhala-font-correction.sh` විධානය ක්‍රියා කිරීමෙන්).
-
-Script එක ක්‍රියා කරවීමෙන් පසු ලැබෙන උපදෙස් පිළිපදින්න. 
+ඉන්පසු ලැබෙන උපදෙස් පරිදි ඔබට කැමති sinhala font එක display කරගතහැකියි.
 
 ## ස්තුති කිරීමට අවශ්‍යද? 
 
