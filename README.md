@@ -48,4 +48,4 @@ bash sinhala-font-changer.sh
 Contact Adeepa: slrootkit@gmail.com (https://slrootkit.blogspot.com)<br/>
 Contact Hankyo: hankyomail@gmail.com
 
-Github Issue එකක් open කිරීමෙන් ද උපකාර ලබා ගත හැකිය. 
+![Github Issue](https://github.com/hankyoTutorials/linux-system-sinhala-font-changer/issues) එකක් open කිරීමෙන් ද උපකාර ලබා ගත හැකිය. 
