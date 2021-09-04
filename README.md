@@ -1,4 +1,4 @@
-# linux-system-sinhala-font-changer
+# &nbsp;&nbsp;&nbsp;Linux System Sinhala Font Changer<br/><sub>(Linux වලදි display වෙන sinhala font එක වෙනස් කරමු)</sub>
 
 ![sri-lankan-flag](https://user-images.githubusercontent.com/33552426/132079084-17fb09f4-fd62-4f88-a72b-7f204cb9ac7b.gif)
 
