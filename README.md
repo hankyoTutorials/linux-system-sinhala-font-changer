@@ -13,7 +13,7 @@ Wiki හි පහත ලිපි වල විස්තරාත්මකව �
 configuration file එකක් සහ අවශ්‍ය font ස්වයංක්‍රීයව install කිරීම සඳහා මෙම shell 
 වැඩසටහන නිර්මාණය කර ඇත. 
 
-![difference-between-default-font-and-changed-fonts](https://user-images.githubusercontent.com/33552426/132078904-57667498-07dc-4fc8-b03f-737deb793c89.png)
+![sri-lankan-flag](https://user-images.githubusercontent.com/33552426/132079084-17fb09f4-fd62-4f88-a72b-7f204cb9ac7b.gif)
 
 ## භාවිතය
 
