@@ -30,7 +30,7 @@ wget https://github.com/hankyoTutorials/linux-system-sinhala-font-changer/archiv
 unzip -qo main.zip
 mv linux-system-sinhala-font-changer-main system-sinhala-font-changer
 ```
-install කලපසු මේම වැඩසටහන ක්‍රියාත්මක කිරීමට මෙම command එක භාවිත කරන්න:
+Install කලපසු මේම වැඩසටහන ක්‍රියාත්මක කිරීමට මෙම command එක භාවිත කරන්න:
 
 ```
 cd ~/system-sinhala-font-changer/
