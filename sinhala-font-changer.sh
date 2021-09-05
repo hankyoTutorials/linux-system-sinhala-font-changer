@@ -5,14 +5,16 @@ red=$(tput setaf 9);
 yellow=$(tput setaf 11);
 green=$(tput setaf 10);
 cyan=$(tput setaf 14);
+white=$(tput setaf 15);
+bold=$(tput bold);
 end=$(tput sgr0);
 
 # ------------------------------ Welcome log -----------------------------
 printf \
 "
-${yellow}Welcome to Sinhala Font Changer Script!!!${end}
+${yellow}${bold}Welcome to Sinhala Font Changer Script!!!
 
-This Script will add a configuration file for font config library in
+${cyan}This Script will add a configuration file for font config library in
 \"~/.config/fontconfig/conf.d/50-si-custom.conf\", this will render
 any sinhala text in a sinhala font you choose in the next steps. Script
 will install fonts if they are not already installed. New fonts will be
@@ -24,28 +26,27 @@ or run the script for each user.
 \n"
 # -------------------------------------------------------------------------
 
-read -p "${green}Press enter to continue> ${end}"
+read -p "${green}Press enter to continue> "
 
 # --------------- Change system sinhala font -----------------------------
 
 printf \
 "
-Select the font you want to set as the sinhala font. Type the corresponding 
+${cyan}Select the font you want to set as the sinhala font. Type the corresponding 
 number of the font you like. Visit the link in the bracket to preview how 
 each font will look like. 
 
-Here are your options, 
-${cyan}
-1 - Noto Sans Sinhala (https://www.google.com/get/noto/#sans-sinh)
-2 - Noto Serif Sinhala (https://www.google.com/get/noto/#serif-sinh)
+${green}Here are your options, 
+${yellow}
+1 - Noto Sans Sinhala
+2 - Noto Serif Sinhala
 3 - tuxSinhala Bold
 n - exit
-${end}
 "
 
 while true
 do
-  read -p "${green}select the font (type the number)> ${end}" selected_font_code
+  read -p "${green}select the font (type the number)> " selected_font_code
   case $selected_font_code in
        1)
           selected_font="Noto Sans Sinhala"
@@ -60,6 +61,7 @@ do
           break
           ;;
        n)
+          echo "${end}"
           exit
           break
           ;;
@@ -69,14 +71,14 @@ do
   esac
 done  
 
-echo -e "\n${cyan}Now installing \"${green}$selected_font${cyan}\" font,${end}"
+echo -e "\n${cyan}Now installing \"${green}$selected_font${cyan}\" font,"
 
 copy_dest=~/".local/share/fonts/sinhala-font-changer/${selected_font}"
 mkdir -p "$copy_dest"
 cp -n ./fonts/"${selected_font}"/* "$copy_dest"
 fc-cache -f
 
-echo "${cyan}Setting up \"${green}$selected_font${cyan}\" as the system-wide sinhala font,${end}"
+echo "${cyan}Setting up \"${green}$selected_font${cyan}\" as the system-wide sinhala font,"
 
 mkdir -p ~/.config/fontconfig/conf.d
 sed "s/FONT_PLACE_HOLDER/${selected_font}/" 50-si-custom.conf > ~/.config/fontconfig/conf.d/50-si-custom.conf
