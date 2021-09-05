@@ -2,21 +2,20 @@
 
 ![sri-lankan-flag](https://user-images.githubusercontent.com/33552426/132079084-17fb09f4-fd62-4f88-a72b-7f204cb9ac7b.gif)
 
-Linux මෙහෙයුම් පද්ධති වල සිංහල අකුරු display වීම නිවැරදි ආකාරයෙන් සිදු නොවේ. සිංහල font 
-install කළත් එමගින් ගැටළුව නොවිසඳේ. මෙම ගැටළුව විසඳීමට `fontconfig` library එක හරහා 
-සිංහල Unicode අකුරු සඳහා සිංහල font එකක් ආදේශනය කළ යුතු බව විශේෂයෙන් මෙහෙයුම් පද්ධතියට 
-අවධාරණය කළ යුතුය. මේ සඳහා සැකසිය යුතු `fontconfig` configuration file සම්බන්ධයෙන් Arch 
-Wiki හි පහත ලිපි වල විස්තරාත්මකව තතු ඉදිරිපත් කර ඇත.
+ශ්‍රී ලංකාවෙ linux පාවිච්චි කරන බොහෝ දෙනෙක් linux වලදි display වන සිංහල අකුරු කැතයි හා 
+ඒ අකුරු කියවන්න අමාරුයි ලෙස පවසන ලදි, එමනිසා මෙම මෘදුකාංගය නිපදවන ලද්දේ එම ගැටළුවට විසදුමක් වශයෙනි, 
+මෙම මෘදුකාංගයෙන් ඔබට කැමති හා ඔබට කියවීමට පහසු sinhala font එකක් display කරගත හැකිය.
+
+මෙම මෘදුකාංගය නිර්මාණය කරඇති ආකාරය:<br/>
+<sub> &nbsp;&nbsp;&nbsp;මෙහිදී `fontconfig` library එක හරහා සිංහල Unicode අකුරු සඳහා සිංහල font එකක් ආදේශනය කළ යුතු බව විශේෂයෙන් මෙහෙයුම් පද්ධතියට 
+අවධාරණය කරයි, මේ සඳහා සැකසිය යුතු `fontconfig` configuration file සම්බන්ධයෙන් Arch 
+Wiki හි පහත ලිපි වල විස්තරාත්මකව තතු ඉදිරිපත් කර ඇත.</sub>
 
 + [Font_configuration](https://wiki.archlinux.org/title/Font_configuration)
 + [Font_configuration/Examples](https://wiki.archlinux.org/title/Font_configuration/Examples)
 
-කෙසේ වෙතත් පරිශීලකයන්ගේ පහසුව ගැන සිතා සිංහල අකුරු නිවැරදිව පෙන්වීවට අවශ්‍ය පොදු 
-configuration file එකක් සහ අවශ්‍ය font ස්වයංක්‍රීයව install කිරීම සඳහා මෙම shell 
-වැඩසටහන නිර්මාණය කර ඇත. 
-
 ### භාවිත කලහැකි Linux මෙහෙයුම් පද්ධති:
- Ubuntu, Linux Mint, Fedora වැනි සෑම linux මෙහෙයුම් පද්ධතියකම මෙම මෘදුකාංගය භාවිත කල හැක.
+ Ubuntu,linux mint,fedora වැනි සෑම linux මෙහෙයුම් පද්ධතියකම මෙම මෘදුකාංගය භාවිත කල හැක.
  
 ## භාවිතය
 
