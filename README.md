@@ -11,8 +11,8 @@
 අවධාරණය කරයි, මේ සඳහා සැකසිය යුතු `fontconfig` configuration file සම්බන්ධයෙන් Arch 
 Wiki හි පහත ලිපි වල විස්තරාත්මකව තතු ඉදිරිපත් කර ඇත.</sub>
 
-+ [Font_configuration](https://wiki.archlinux.org/title/Font_configuration)
-+ [Font_configuration/Examples](https://wiki.archlinux.org/title/Font_configuration/Examples)
++ <sub>[Font_configuration](https://wiki.archlinux.org/title/Font_configuration)</sub>
++ <sub>[Font_configuration/Examples](https://wiki.archlinux.org/title/Font_configuration/Examples)</sub>
 
 ### භාවිත කලහැකි Linux මෙහෙයුම් පද්ධති:
  Ubuntu,linux mint,fedora වැනි සෑම linux මෙහෙයුම් පද්ධතියකම මෙම මෘදුකාංගය භාවිත කල හැක.
