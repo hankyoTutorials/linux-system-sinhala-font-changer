@@ -40,7 +40,8 @@ ${green}Here are your options,
 ${yellow}
 1 - Noto Sans Sinhala
 2 - Noto Serif Sinhala
-3 - tuxSinhala Bold
+3 - UN-Gurulugomi
+4 - tuxSinhala Bold
 n - exit
 "
 
@@ -57,6 +58,10 @@ do
           break
           ;;
        3)
+          selected_font="UN-Gurulugomi"
+          break
+          ;;
+       4)
           selected_font="tuxSinhala Bold" 
           break
           ;;
@@ -66,7 +71,7 @@ do
           break
           ;;
        *)
-          echo "${red}ERROR!: only 1 or 2 or 3 or n is accepted. n to exit the script.${end}"
+          echo "${red}ERROR!: only 1,2,3,4 or n is accepted. n to exit the script."
           ;;
   esac
 done  
