@@ -35,9 +35,10 @@ Install කලපසු මේම වැඩසටහන ක්‍රියාත
 cd ~/system-sinhala-font-changer/
 bash sinhala-font-changer.sh
 ```
-ඉන්පසු ලැබෙන උපදෙස් පරිදි ඔබට කැමති sinhala font එක display කරගතහැකියි.
 
-<sub>NOTE: මෙහිඇති UN-Gurulugomi font එක භාවිත කලහැක්කේ පෞද්ගලික පරිහරණය සදහා පමණි(Personal use Only)</sub>
+![available-sinhala-font-preview-in-terminal](https://user-images.githubusercontent.com/33552426/133214737-37f11441-699e-42aa-89c5-49363584b57e.png)
+
+ඉන්පසු ලැබෙන උපදෙස් පරිදි ඔබට කැමති sinhala font එක display කරගතහැකියි.
 
 ## ස්තුති කිරීමට අවශ්‍යද? 
 
