@@ -2,9 +2,9 @@
 
 <img src="https://user-images.githubusercontent.com/33552426/132079084-17fb09f4-fd62-4f88-a72b-7f204cb9ac7b.gif" alt="flag" width="50"/><img src="https://user-images.githubusercontent.com/33552426/132079084-17fb09f4-fd62-4f88-a72b-7f204cb9ac7b.gif" alt="flag" width="70"/><img src="https://user-images.githubusercontent.com/33552426/132079084-17fb09f4-fd62-4f88-a72b-7f204cb9ac7b.gif" alt="flag" width="50"/>
 
-ඔබ linux මෙහෙයුම් පද්ධතිය භාවිත කරන අයෙක්නම්,<br/>
- &nbsp;&nbsp;මෙම මෘදුකාංගයෙන් ඔබට කැමති හා ඔබට කියවීමට පහසු sinhala font එකක් display කරගත හැකියි.
-
+ඔබ linux මෙහෙයුම් පද්ධතිය භාවිත කරන පුද්ගලයෙක්නම්,<br/>
+ &nbsp;&nbsp;මෙම මෘදුකාංගය භාවිතකර ඔබට කැමති සිංහල අකුරු සහිත සිංහල font එකක් display වීමට සැලැස්විය හැකියි,
+ 
 ![linux-system-sinhala-font-changer-main-photo](https://user-images.githubusercontent.com/33552426/133216984-fc4adfab-0c86-4af7-91fb-a411bb2eb7d0.png)
 
 ### මෙම මෘදුකාංගය නිර්මාණය කරඇති ආකාරය:
