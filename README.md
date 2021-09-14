@@ -1,6 +1,6 @@
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://user-images.githubusercontent.com/33552426/132079084-17fb09f4-fd62-4f88-a72b-7f204cb9ac7b.gif" alt="flag" width="50"/><img src="https://user-images.githubusercontent.com/33552426/132079084-17fb09f4-fd62-4f88-a72b-7f204cb9ac7b.gif" alt="flag" width="70"/><img src="https://user-images.githubusercontent.com/33552426/132079084-17fb09f4-fd62-4f88-a72b-7f204cb9ac7b.gif" alt="flag" width="50"/>
+# Linux System Sinhala Font Changer
 
-# &nbsp;&nbsp;&nbsp;Linux System Sinhala Font Changer
+<img src="https://user-images.githubusercontent.com/33552426/132079084-17fb09f4-fd62-4f88-a72b-7f204cb9ac7b.gif" alt="flag" width="50"/><img src="https://user-images.githubusercontent.com/33552426/132079084-17fb09f4-fd62-4f88-a72b-7f204cb9ac7b.gif" alt="flag" width="70"/><img src="https://user-images.githubusercontent.com/33552426/132079084-17fb09f4-fd62-4f88-a72b-7f204cb9ac7b.gif" alt="flag" width="50"/>
 
 ඔබ linux මෙහෙයුම් පද්ධතිය භාවිත කරන අයෙක්නම්,<br/>
  &nbsp;&nbsp;මෙම මෘදුකාංගයෙන් ඔබට කැමති හා ඔබට කියවීමට පහසු sinhala font එකක් display කරගත හැකියි.
