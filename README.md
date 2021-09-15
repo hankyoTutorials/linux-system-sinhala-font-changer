@@ -2,10 +2,9 @@
 
 <img src="https://user-images.githubusercontent.com/33552426/132079084-17fb09f4-fd62-4f88-a72b-7f204cb9ac7b.gif" alt="flag" width="50"/><img src="https://user-images.githubusercontent.com/33552426/132079084-17fb09f4-fd62-4f88-a72b-7f204cb9ac7b.gif" alt="flag" width="70"/><img src="https://user-images.githubusercontent.com/33552426/132079084-17fb09f4-fd62-4f88-a72b-7f204cb9ac7b.gif" alt="flag" width="50"/>
 
-ඔබ linux මෙහෙයුම් පද්ධතිය භාවිත කරන පුද්ගලයෙක්නම්,<br/>
- &nbsp;&nbsp;මෙම මෘදුකාංගය භාවිතකර ඔබට කැමති සිංහල අකුරු සහිත සිංහල font එකක් display වීමට සැලැස්විය හැකියි,
+ &nbsp;&nbsp;මෙම මෘදුකාංගයෙන් ඔබට කැමති සිංහල අකුරු සහිත සිංහල font එකක් ඔබගේ linux computer එකෙහි display කිරීම සිදුකරයි,
  
-![linux-system-sinhala-font-changer-main-photo](https://user-images.githubusercontent.com/33552426/133216984-fc4adfab-0c86-4af7-91fb-a411bb2eb7d0.png)
+![linux-system-sinhala-font-changer-main-photo](https://user-images.githubusercontent.com/33552426/133355772-d0dac0ec-7923-4bf6-8153-d7cf2560fd6f.png)
 
 ### මෙම මෘදුකාංගය නිර්මාණය කරඇති ආකාරය:
  &nbsp;&nbsp;&nbsp;මෙහිදී `fontconfig` library එක හරහා සිංහල Unicode අකුරු සඳහා සිංහල font එකක් ආදේශනය කළ යුතු බව විශේෂයෙන් මෙහෙයුම් පද්ධතියට 
