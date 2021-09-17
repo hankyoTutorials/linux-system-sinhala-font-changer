@@ -2,7 +2,7 @@
 
 <img src="https://user-images.githubusercontent.com/33552426/132079084-17fb09f4-fd62-4f88-a72b-7f204cb9ac7b.gif" alt="flag" width="50"/><img src="https://user-images.githubusercontent.com/33552426/132079084-17fb09f4-fd62-4f88-a72b-7f204cb9ac7b.gif" alt="flag" width="70"/><img src="https://user-images.githubusercontent.com/33552426/132079084-17fb09f4-fd62-4f88-a72b-7f204cb9ac7b.gif" alt="flag" width="50"/>
 
- &nbsp;&nbsp;අපේ linux computer එකේ display වෙන සිංහල font එක එච්චරම ලස්සන නෑ වගේම ඒ අකුරු කියවන්න ටිකක් අමාරුයි, ඒම නිසයි මෙම මෘදුකාංගය නිර්මාණය කලේ,<br/>
+ &nbsp;&nbsp;Linux operating system එකේ display වෙන සිංහල font එක එච්චරම ලස්සන නෑ වගේම ඒ අකුරු කියවන්න ටිකක් අමාරුයි,<br/>
  මෙම මෘදුකාංගයෙන් ඔබට කැමති සිංහල අකුරු සහිත සිංහල font එකක් ඔබගේ linux computer එකෙහි display කිරීම සිදුකරයි,
  
 ![linux-system-sinhala-font-changer-main-photo](https://user-images.githubusercontent.com/33552426/133355772-d0dac0ec-7923-4bf6-8153-d7cf2560fd6f.png)
