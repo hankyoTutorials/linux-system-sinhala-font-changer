@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# -------------------------- Change dir to current -----------------------
+pushd $(dirname $0) >/dev/null;
+# ------------------------------------------------------------------------
+
 # -------------------------- Colored tput outputs ------------------------
 red=$(tput setaf 9);
 yellow=$(tput setaf 11);
@@ -81,17 +85,19 @@ echo -e "\n${cyan}Now installing \"${green}$selected_font${cyan}\" font,"
 copy_dest=~/".local/share/fonts/sinhala-font-changer/${selected_font}"
 mkdir -p "$copy_dest"
 cp -n ./fonts/"${selected_font}"/* "$copy_dest"
-fc-cache -f
 
 echo "${cyan}Setting up \"${green}$selected_font${cyan}\" as the system-wide sinhala font,"
 
 mkdir -p ~/.config/fontconfig/conf.d
 sed "s/FONT_PLACE_HOLDER/${selected_font}/" 50-si-custom.conf > ~/.config/fontconfig/conf.d/50-si-custom.conf
 
+fc-cache -f
+
 echo -e "${cyan}Configuration is now completed!,"
 echo -e "${cyan}Current sinhala font is:\n ${yellow}$(LANG=si fc-match)"
+
 echo -e "${green}Done!..${end}"
 
 sed 's/FONT_PLACE_HOLDER/'"${selected_font}"'/g' test-current-sinhala-font > current-sinhala-font.txt;
-xdg-open current-sinhala-font.txt
+xdg-open current-sinhala-font.txt &>/dev/null;
 # ------------------------------------------------------------------------
