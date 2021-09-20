@@ -1,14 +1,17 @@
 "FONT_PLACE_HOLDER" font එක වෙත මාරු කරන ලදි! :)
 
-මෙම web පිටුව වෙත පිවිස display වන සිංහල font එක වෙනස් වී ඇත්දැයි ඔබට පරීක්ෂා කල හැකිය:
- https://si.wikipedia.org/wiki/sinhala
+මෙහි display වන සිංහල අකුරු පරීක්ෂා කර sinhala font එක වෙනස් වී ඇත්දැයි ඔබට නිරීක්ෂණය කල හැකිය.
+
+සමහර අවස්ථා වලදී නව සිංහල font එක වෙත මාරු වීමට තත්පර 15ක් වැනි සුලුවේලාවක් ගතවේ:
+ මෙම web පිටුව වෙත පිවිසීමෙන්ද display වන සිංහල font එක වෙනස් වී ඇත්දැයි ඔබට පරීක්ෂා කල හැකිය:
+  https://si.wikipedia.org/wiki/sinhala
 
 
 #------------ Change to another sinhala font -------------------------
 දැනට පවතින සිංහල font එකෙන් වෙනත් සිංහල font එකකට මාරු වීමට ඔබ කැමතිනම්,
 මෙම command 2ක terminal එකෙහි run කර Linux-system-sinhala-font-changer මෘදුකාගය යලි open කරගත හැකිය:
 
-cd ~/system-sinhala-font-changer/
+cd ~/font-changer/
 bash sinhala-font-changer.sh
 
 ඉන්පසු ලැබෙන උපදෙස් පරිදි ඔබට කැමති sinhala font එකක් display කරගත හැකිය.
