@@ -20,19 +20,14 @@ Wiki හි පහත ලිපි වල විස්තරාත්මකව �
  
 ## භාවිතය:
 
-+ පහත command කිහිපය copy කර linux terminal එකට paste කිරීමෙන් මෙය download කර install කරගතහැකියි:
+1. පලමුව මෙම link එක මගින් මෙම මෘදුකාංගය download කරගන්න: &nbsp;![sinhala-font-changer.zip](https://github.com/hankyoTutorials/linux-system-sinhala-font-changer/releases/download/v2.0/sinhala-font-changer.zip)
+2. දෙවනුව මෙම zip එක extract කරගන්න:<br/>
 
-```
-cd $HOME
-wget https://github.com/hankyoTutorials/linux-system-sinhala-font-changer/archive/refs/heads/main.zip
-unzip -qo main.zip
-mv linux-system-sinhala-font-changer-main system-sinhala-font-changer
-```
 + Install කලපසු මේම වැඩසටහන ක්‍රියාත්මක කිරීමට මෙම command එක භාවිත කරන්න:
 
 ```
-cd ~/system-sinhala-font-changer/
-bash sinhala-font-changer.sh
+cd ~/sinhala-font-changer/
+bash font-changer.sh
 ```
 
 ඉන්පසු ලැබෙන උපදෙස් පරිදි ඔබට කැමති sinhala font එක display කරගතහැකියි.
