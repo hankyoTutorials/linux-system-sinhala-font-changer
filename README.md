@@ -15,15 +15,16 @@
 
 ## Install කරන ආකාරය:
 
-1. පලමුව මෙම link එක මගින් මෙම මෘදුකාංගය download කරගන්න: 
+1. පලමුව මෙම link එක මගින් මෙම මෘදුකාංගය download කරගන්න: <br />
 [sinhala-font-changer.zip](https://github.com/hankyoTutorials/linux-system-sinhala-font-changer/releases/download/v2.0/sinhala-font-changer.zip)
 
 1. ඉන්පසු එම zip එක extract කරගන්න: 
-![Extract-linux-sinhala-font-changer-zip](./res/instruction-1.jpg)
+
+    ![Extract-linux-sinhala-font-changer-zip](./res/instruction-1.jpg)
 
 1. මීලගට එම "sinhala-font-changer" folder එක cut කර ඔබගේ home folder එකට paste කරන්න: 
-![move-extracted-folder-to-home](./res/instruction-2.jpg) 
-![move-extracted-folder-to-home-2](./res/instruction-3.jpg)
+    ![move-extracted-folder-to-home](./res/instruction-2.jpg) 
+    ![move-extracted-folder-to-home-2](./res/instruction-3.jpg)
 
 ## භාවිත කරන ආකාරය:
 
@@ -37,13 +38,13 @@
     ![run-commands-to-open-font-changer](./res/usage-instruction-1.jpg)
 
 1. මෙහිදී "Enter" key එක press කරන්න:
-![press-enter-to-continue](./res/usage-instruction-2.jpg)
+    ![press-enter-to-continue](./res/usage-instruction-2.jpg)
 
 1. මෙහි ඇති සිංහල font අතරින් ඔබට කැමති සිංහල font එකට අදාල අකුර type කර enter කරන්න:
-![choose-a-font-to-install](./res/usage-instruction-3.jpg)
+    ![choose-a-font-to-install](./res/usage-instruction-3.jpg)
 
 1. Complete!, ඉන්පසු සිංහල font එක වෙනස් වී ඇත්දැයි පරික්ෂා කර බලන්න
-![installation-is-now-complete](./res/usage-instruction-4.jpg)
+    ![installation-is-now-complete](./res/usage-instruction-4.jpg)
 
 1. නැවතත් වෙනත් සිංහල font එකකට මාරුවීමට කැමතිනම් මෙම command 2ක type කර යලි මෙම මෘදුකාංගය 
 open කරගතහැකිය:
