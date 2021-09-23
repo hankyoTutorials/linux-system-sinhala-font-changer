@@ -5,7 +5,7 @@
 මෙම මෘදුකාංගයෙන් ඔබට කියවීමට පහසු සිංහල අකුරු සහිත, අලංකාර සිංහල font එකක් ඔබගේ linux computer 
 එකෙහි display කිරීම සිදුකරයි,
  
-![linux-system-sinhala-font-changer-main-photo](./res/font-catalogue.png)
+![linux-system-sinhala-font-changer-main-photo](./res/font-catalogue.jpg)
  
 ### භාවිත කලහැකි Linux මෙහෙයුම් පද්ධති:
 
@@ -19,11 +19,11 @@
 [sinhala-font-changer.zip](https://github.com/hankyoTutorials/linux-system-sinhala-font-changer/releases/download/v2.0/sinhala-font-changer.zip)
 
 1. ඉන්පසු එම zip එක extract කරගන්න: 
-![Extract-linux-sinhala-font-changer-zip](./res/instruction-1.png)
+![Extract-linux-sinhala-font-changer-zip](./res/instruction-1.jpg)
 
 1. මීලගට එම "sinhala-font-changer" folder එක cut කර ඔබගේ home folder එකට paste කරන්න: 
-![move-extracted-folder-to-home](./res/instruction-2.png) 
-![move-extracted-folder-to-home-2](./res/instruction-3.png)
+![move-extracted-folder-to-home](./res/instruction-2.jpg) 
+![move-extracted-folder-to-home-2](./res/instruction-3.jpg)
 
 ## භාවිත කරන ආකාරය:
 
@@ -34,16 +34,16 @@
     bash font-changer.sh
     ```
 
-    ![run-commands-to-open-font-changer](./res/usage-instruction-1.png)
+    ![run-commands-to-open-font-changer](./res/usage-instruction-1.jpg)
 
 1. මෙහිදී "Enter" key එක press කරන්න:
-![press-enter-to-continue](./res/usage-instruction-2.png)
+![press-enter-to-continue](./res/usage-instruction-2.jpg)
 
 1. මෙහි ඇති සිංහල font අතරින් ඔබට කැමති සිංහල font එකට අදාල අකුර type කර enter කරන්න:
-![choose-a-font-to-install](./res/usage-instruction-3.png)
+![choose-a-font-to-install](./res/usage-instruction-3.jpg)
 
 1. Complete!, ඉන්පසු සිංහල font එක වෙනස් වී ඇත්දැයි පරික්ෂා කර බලන්න
-![installation-is-now-complete](./res/usage-instruction-4.png)
+![installation-is-now-complete](./res/usage-instruction-4.jpg)
 
 1. නැවතත් වෙනත් සිංහල font එකකට මාරුවීමට කැමතිනම් මෙම command 2ක type කර යලි මෙම මෘදුකාංගය 
 open කරගතහැකිය:
@@ -52,8 +52,8 @@ open කරගතහැකිය:
     cd ~/sinhala-font-changer
     bash font-changer.sh
     ```
-    
-    ![change-to-another-font](./res/usage-instruction-5.png)
+
+    ![change-to-another-font](./res/usage-instruction-5.jpg)
 
 ### මෙම මෘදුකාංගය නිර්මාණය කරඇති ආකාරය:
 
