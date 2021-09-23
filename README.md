@@ -2,9 +2,10 @@
 
 <img src="https://user-images.githubusercontent.com/33552426/132079084-17fb09f4-fd62-4f88-a72b-7f204cb9ac7b.gif" alt="flag" width="50"/><img src="https://user-images.githubusercontent.com/33552426/132079084-17fb09f4-fd62-4f88-a72b-7f204cb9ac7b.gif" alt="flag" width="70"/><img src="https://user-images.githubusercontent.com/33552426/132079084-17fb09f4-fd62-4f88-a72b-7f204cb9ac7b.gif" alt="flag" width="50"/>
 
-මෙම මෘදුකාංගයෙන් ඔබට කියවීමට පහසු සිංහල අකුරු සහිත, අලංකාර සිංහල font එකක් ඔබගේ linux computer එකෙහි display කිරීම සිදුකරයි,
+මෙම මෘදුකාංගයෙන් ඔබට කියවීමට පහසු සිංහල අකුරු සහිත, අලංකාර සිංහල font එකක් ඔබගේ linux computer 
+එකෙහි display කිරීම සිදුකරයි,
  
-![linux-system-sinhala-font-changer-main-photo](https://user-images.githubusercontent.com/33552426/133355772-d0dac0ec-7923-4bf6-8153-d7cf2560fd6f.png)
+![linux-system-sinhala-font-changer-main-photo](./res/font-catalogue.png)
  
 ### භාවිත කලහැකි Linux මෙහෙයුම් පද්ධති:
 
@@ -14,43 +15,59 @@
 
 ## Install කරන ආකාරය:
 
-1. පලමුව මෙම link එක මගින් මෙම මෘදුකාංගය download කරගන්න: [sinhala-font-changer.zip](https://github.com/hankyoTutorials/linux-system-sinhala-font-changer/releases/download/v2.0/sinhala-font-changer.zip)
-1. ඉන්පසු එම zip එක extract කරගන්න:<br/>  <img src="https://user-images.githubusercontent.com/33552426/134013901-01fecf08-db7a-43e9-83eb-a93eaeecdfd6.png" alt="extract-linux-sinhala-font-changer-zip" width="50%"/>
-1. මීලගට එම "sinhala-font-changer" folder එක cut කර ඔබගේ home folder එකට paste කරන්න:<br/> <img src="https://user-images.githubusercontent.com/33552426/134013320-484b7001-9a30-4cfd-af20-c5241f1ac34e.png" alt="cut-the-extacted-folder-paste-to-home-folder" width="50%"/> <img src="https://user-images.githubusercontent.com/33552426/134002954-090d4178-52fc-4a5d-858e-3befc50c90a6.png" alt="paste-cutted-folder-to-home-folder" width="50%"/>
+1. පලමුව මෙම link එක මගින් මෙම මෘදුකාංගය download කරගන්න: 
+[sinhala-font-changer.zip](https://github.com/hankyoTutorials/linux-system-sinhala-font-changer/releases/download/v2.0/sinhala-font-changer.zip)
+
+1. ඉන්පසු එම zip එක extract කරගන්න: 
+![Extract-linux-sinhala-font-changer-zip](./res/instruction-1.png)
+
+1. මීලගට එම "sinhala-font-changer" folder එක cut කර ඔබගේ home folder එකට paste කරන්න: 
+![move-extracted-folder-to-home](./res/instruction-2.png) 
+![move-extracted-folder-to-home-2](./res/instruction-3.png)
 
 ## භාවිත කරන ආකාරය:
 
 1. linux terminal එකෙහි මෙම command 2ක type කිරීමෙන් මෙම මෘදුකාංගය open කරගතහැකිය:
+    
+    ```
+    cd ~/sinhala-font-changer
+    bash font-changer.sh
+    ```
 
-```
-cd ~/sinhala-font-changer
-bash font-changer.sh
-```
-<img src="https://user-images.githubusercontent.com/33552426/134268542-fa7f959f-bbe0-4ac2-b781-a64b3dfe8efb.png" alt="run-these-2-commands-to-open-font-changer" width="50%"/><br/>
+    ![run-commands-to-open-font-changer](./res/usage-instruction-1.png)
 
-2. මෙහිදී "Enter" key එක press කරන්න:<br/> <img src="https://user-images.githubusercontent.com/33552426/134269291-a008f738-5501-46c7-a161-60650e52773a.png" alt="press-enter-to-continue" width="50%"/><br/>
-3. මෙහි ඇති සිංහල font අතරින් ඔබට කැමති සිංහල font එකට අදාල අකුර type කර enter කරන්න:<br/> <img src="https://user-images.githubusercontent.com/33552426/134019867-b9e1c912-1a12-49c3-bd26-7e234541b2e1.png" alt="choose-a-sinhala-font-you-to-install" width="50%"/>
-4. Complete!, ඉන්පසු සිංහල font එක වෙනස් වී ඇත්දැයි පරික්ෂා කර බලන්න<br/> <img src="https://user-images.githubusercontent.com/33552426/134002775-37ac6f11-cc30-46e1-b8ea-f2c363248e8e.png" alt="installation-is-now-complete" width="50%"/>
-5. නැවතත් වෙනත් සිංහල font එකකට මාරුවීමට කැමතිනම් මෙම command 2ක type කර යලි මෙම මෘදුකාංගය open කරගතහැකිය:<br/>
+1. මෙහිදී "Enter" key එක press කරන්න:
+![press-enter-to-continue](./res/usage-instruction-2.png)
 
-```
-cd ~/sinhala-font-changer
-bash font-changer.sh
-```
-<img src="https://user-images.githubusercontent.com/33552426/134268542-fa7f959f-bbe0-4ac2-b781-a64b3dfe8efb.png" alt="change-to-another-sinhala-font" width="50%"/>
+1. මෙහි ඇති සිංහල font අතරින් ඔබට කැමති සිංහල font එකට අදාල අකුර type කර enter කරන්න:
+![choose-a-font-to-install](./res/usage-instruction-3.png)
+
+1. Complete!, ඉන්පසු සිංහල font එක වෙනස් වී ඇත්දැයි පරික්ෂා කර බලන්න
+![installation-is-now-complete](./res/usage-instruction-4.png)
+
+1. නැවතත් වෙනත් සිංහල font එකකට මාරුවීමට කැමතිනම් මෙම command 2ක type කර යලි මෙම මෘදුකාංගය 
+open කරගතහැකිය:
+
+    ```
+    cd ~/sinhala-font-changer
+    bash font-changer.sh
+    ```
+    
+    ![change-to-another-font](./res/usage-instruction-5.png)
 
 ### මෙම මෘදුකාංගය නිර්මාණය කරඇති ආකාරය:
 
-මෙහිදී `fontconfig` library එක හරහා සිංහල Unicode අකුරු සඳහා සිංහල font එකක් ආදේශනය කළ යුතු බව විශේෂයෙන් 
-මෙහෙයුම් පද්ධතියට අවධාරණය කරයි, මේ සඳහා සැකසිය යුතු `fontconfig` configuration file සම්බන්ධයෙන් Arch 
-Wiki හි පහත ලිපි වල විස්තරාත්මකව තතු ඉදිරිපත් කර ඇත.
+මෙහිදී `fontconfig` library එක හරහා සිංහල Unicode අකුරු සඳහා සිංහල font එකක් ආදේශනය කළ යුතු බව 
+විශේෂයෙන් මෙහෙයුම් පද්ධතියට අවධාරණය කරයි, මේ සඳහා සැකසිය යුතු `fontconfig` configuration file 
+සම්බන්ධයෙන් Arch Wiki හි පහත ලිපි වල විස්තරාත්මකව තතු ඉදිරිපත් කර ඇත.
 
 + [Font_configuration](https://wiki.archlinux.org/title/Font_configuration)
 + [Font_configuration/Examples](https://wiki.archlinux.org/title/Font_configuration/Examples)
 
 ## උපකාර
 
-* [Github Issue](https://github.com/hankyoTutorials/linux-system-sinhala-font-changer/issues) එකක් open කිරීමෙන් උපකාර ලබා ගත හැකිය. 
+* [Github Issue](https://github.com/hankyoTutorials/linux-system-sinhala-font-changer/issues) එකක් 
+open කිරීමෙන් උපකාර ලබා ගත හැකිය. 
 
 Contact Adeepa: slrootkit@gmail.com (https://slrootkit.blogspot.com)<br/>
 Contact Hankyo: hankyomail@gmail.com
